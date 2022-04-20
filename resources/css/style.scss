@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;1,700&display=swap");
 
 :root {
+  --white: #fefefe;
   --black: #2b2839;
   --purple-pale: #f1edf8;
   --green-pale: #eef6f0;
+  --green: #4fc08d;
+  --peach-pale: #f2c09c;
   --peach-pale-transparent: rgba(242, 192, 156, 0.4);
 }
 
@@ -23,6 +26,26 @@ body {
   background-color: var(--purple-pale);
   line-height: 1.4;
 
+  .btn {
+    padding: 12px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    border: 2px solid var(--peach-pale);
+    border-radius: 15px;
+    font-weight: 700;
+    font-style: italic;
+    background-color: var(--peach-pale);
+    color: var(--white);
+    transition: color ease-in-out 0.25s;
+    transition: background-color ease-in-out 0.25s;
+  }
+
+  .btn:focus,
+  .btn:hover {
+    color: var(--peach-pale);
+    background-color: var(--white);
+  }
+
   .container {
     padding: 55px;
     width: 90%;
@@ -33,20 +56,44 @@ body {
     border: 10px solid var(--peach-pale-transparent);
     border-radius: 15px;
     text-align: center;
+    position: relative;
+  }
 
-    h1 {
-      font-size: 38px;
-      max-width: 245px;
-      margin: 40px auto;
-      text-align: center;
-      font-weight: 700;
-      font-style: italic;
-      text-transform: uppercase;
+  h1 {
+    font-size: 38px;
+    max-width: 245px;
+    margin: 40px auto;
+    text-align: center;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+
+  .screen-1 {
+    .choose-structure-btn {
+      position: relative;
+      bottom: 0;
+      left: 100px;
+      opacity: 0;
     }
 
-    .btn {
-      padding: 14px 36px;
-      font-size: 24px;
+    .animated-emoji {
+      position: absolute;
+      top: 40px;
+      left: 50px;
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+  }
+
+  .screen-2 {
+    display: none;
+    opacity: 0;
+
+    h1 {
+      margin: 0 auto;
+      opacity: 0;
+      transform: scale(2);
     }
   }
 }

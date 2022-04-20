@@ -11,9 +11,24 @@
     <script src="./resources/js/script.js" defer></script>
   </head>
   <body>
-    <div class="container">
+    <div id="screen-1" class="screen-1 container">
       <h1 id="dynamicTitle"></h1>
-      <button class="btn choose-structure-btn">Choose structure</button>
+      <button id="choose-structure-btn" class="btn choose-structure-btn">
+        Choose structure
+      </button>
+      <img
+        id="animated-emoji"
+        class="animated-emoji"
+        src="./resources/images/laughing_emoji.png"
+        alt="laughing emoji"
+      />
     </div>
+
+    <div id="screen-2" class="screen-2 container">
+      <h1 id="screen-2-title">Select joke structure</h1>
+      <!-- Form to be added here -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
   </body>
 </html>

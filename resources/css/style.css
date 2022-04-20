@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;1,700&display=swap");
 :root {
+  --white: #fefefe;
   --black: #2b2839;
   --purple-pale: #f1edf8;
   --green-pale: #eef6f0;
+  --green: #4fc08d;
+  --peach-pale: #f2c09c;
   --peach-pale-transparent: rgba(242, 192, 156, 0.4);
 }
 
@@ -28,6 +31,28 @@ body {
   line-height: 1.4;
 }
 
+body .btn {
+  padding: 12px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  border: 2px solid var(--peach-pale);
+  border-radius: 15px;
+  font-weight: 700;
+  font-style: italic;
+  background-color: var(--peach-pale);
+  color: var(--white);
+  -webkit-transition: color ease-in-out 0.25s;
+  transition: color ease-in-out 0.25s;
+  -webkit-transition: background-color ease-in-out 0.25s;
+  transition: background-color ease-in-out 0.25s;
+}
+
+body .btn:focus,
+body .btn:hover {
+  color: var(--peach-pale);
+  background-color: var(--white);
+}
+
 body .container {
   padding: 55px;
   width: 90%;
@@ -38,9 +63,10 @@ body .container {
   border: 10px solid var(--peach-pale-transparent);
   border-radius: 15px;
   text-align: center;
+  position: relative;
 }
 
-body .container h1 {
+body h1 {
   font-size: 38px;
   max-width: 245px;
   margin: 40px auto;
@@ -50,8 +76,31 @@ body .container h1 {
   text-transform: uppercase;
 }
 
-body .container .btn {
-  padding: 14px 36px;
-  font-size: 24px;
+body .screen-1 .choose-structure-btn {
+  position: relative;
+  bottom: 0;
+  left: 100px;
+  opacity: 0;
+}
+
+body .screen-1 .animated-emoji {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  opacity: 0;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
+
+body .screen-2 {
+  display: none;
+  opacity: 0;
+}
+
+body .screen-2 h1 {
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 /*# sourceMappingURL=style.css.map */
